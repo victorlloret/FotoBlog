@@ -6667,3 +6667,395 @@ Served asset /entries.css - 304 Not Modified (0ms)
 
 Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-04 19:03:08 +0100
 Served asset /scaffolds.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-05 00:03:19 +0100
+Processing by EntriesController#index as HTML
+Completed 401 Unauthorized in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-11-05 00:03:19 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/Victor/.rvm/gems/ruby-1.9.3-p194/gems/devise-2.1.2/app/views/devise/shared/_links.erb (1.9ms)
+  Rendered /Users/Victor/.rvm/gems/ruby-1.9.3-p194/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 199ms (Views: 97.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:20 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:20 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:20 +0100
+Served asset /entries.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:20 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-11-05 00:03:29 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wyamxo3cXwn5zX/iom30gCSdx9Xf6+sMHzR7Xw3gvBY=", "user"=>{"email"=>"victor.anduril@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'victor.anduril@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2012-11-04 18:00:07.644925', "current_sign_in_at" = '2012-11-04 23:03:29.918193', "sign_in_count" = 3, "updated_at" = '2012-11-04 23:03:29.919682' WHERE "users"."id" = 1[0m
+  [1m[35m (2.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 215ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-05 00:03:29 +0100
+Processing by EntriesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mEntry Load (0.1ms)[0m  SELECT "entries".* FROM "entries" 
+  Rendered entries/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 23ms (Views: 10.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:30 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:30 +0100
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:30 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:30 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/entries/5" for 127.0.0.1 at 2012-11-05 00:03:35 +0100
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mEntry Load (0.2ms)[0m  SELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = 5[0m
+  Rendered entries/show.html.erb within layouts/application (69.6ms)
+Completed 200 OK in 77ms (Views: 74.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:35 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:35 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:35 +0100
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:35 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-05 00:03:40 +0100
+Processing by EntriesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mEntry Load (0.1ms)[0m  [1mSELECT "entries".* FROM "entries" [0m
+  Rendered entries/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:40 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:40 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:40 +0100
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:40 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/entries/new" for 127.0.0.1 at 2012-11-05 00:03:42 +0100
+Processing by EntriesController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered entries/_form.html.erb (5.6ms)
+  Rendered entries/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:43 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:43 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:43 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-05 00:03:43 +0100
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started POST "/entries" for 127.0.0.1 at 2012-11-05 00:04:01 +0100
+Processing by EntriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wyamxo3cXwn5zX/iom30gCSdx9Xf6+sMHzR7Xw3gvBY=", "entry"=>{"title"=>"juju", "pic"=>#<ActionDispatch::Http::UploadedFile:0x00000102961ab0 @original_filename="CIMG1322.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"entry[pic]\"; filename=\"CIMG1322.JPG\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/e8/e8bZUyWqELC5w8D9ZX-sDU+++TM/-Tmp-/RackMultipart20121105-4740-erukn>>, "description"=>"tfrgfhj", "creation_date(1i)"=>"2012", "creation_date(2i)"=>"11", "creation_date(3i)"=>"4"}, "commit"=>"Create Entry"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEntry Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "entries" WHERE "entries"."title" = 'juju' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered entries/_form.html.erb (6.9ms)
+  Rendered entries/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 78ms (Views: 14.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:01 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:01 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:01 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:01 +0100
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started POST "/entries" for 127.0.0.1 at 2012-11-05 00:04:14 +0100
+Processing by EntriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wyamxo3cXwn5zX/iom30gCSdx9Xf6+sMHzR7Xw3gvBY=", "entry"=>{"title"=>"juju", "pic"=>#<ActionDispatch::Http::UploadedFile:0x00000100a2d860 @original_filename="CIMG1325.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"entry[pic]\"; filename=\"CIMG1325.JPG\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/e8/e8bZUyWqELC5w8D9ZX-sDU+++TM/-Tmp-/RackMultipart20121105-4740-14y9u7o>>, "description"=>"tfrgfhj", "creation_date(1i)"=>"2012", "creation_date(2i)"=>"11", "creation_date(3i)"=>"4"}, "commit"=>"Create Entry"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEntry Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "entries" WHERE "entries"."title" = 'juju' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered entries/_form.html.erb (5.1ms)
+  Rendered entries/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 18ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:14 +0100
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:14 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:14 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:14 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-05 00:04:33 +0100
+Processing by EntriesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mEntry Load (0.1ms)[0m  SELECT "entries".* FROM "entries" 
+  Rendered entries/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:33 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:33 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:33 +0100
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:33 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/entries/5" for 127.0.0.1 at 2012-11-05 00:04:34 +0100
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mEntry Load (0.1ms)[0m  SELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = 5[0m
+  Rendered entries/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:34 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:34 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:34 +0100
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:34 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started POST "/entries/comment?id=5" for 127.0.0.1 at 2012-11-05 00:04:40 +0100
+Processing by EntriesController#comment as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wyamxo3cXwn5zX/iom30gCSdx9Xf6+sMHzR7Xw3gvBY=", "comment"=>{"description"=>"hghjgjh"}, "commit"=>"Comment", "id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mEntry Load (0.1ms)[0m  [1mSELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "comments" ("created_at", "description", "entry_id", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", 2012-11-04 23:04:40 UTC], ["description", "hghjgjh"], ["entry_id", 5], ["name", nil], ["updated_at", Sun, 04 Nov 2012 23:04:40 UTC +00:00]]
+  [1m[35m (3.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/entries/5
+Completed 302 Found in 11ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/entries/5" for 127.0.0.1 at 2012-11-05 00:04:40 +0100
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mEntry Load (0.1ms)[0m  SELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = 5[0m
+  Rendered entries/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:40 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:40 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:40 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-05 00:04:40 +0100
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-05 00:05:07 +0100
+Processing by EntriesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mEntry Load (0.1ms)[0m  [1mSELECT "entries".* FROM "entries" [0m
+  Rendered entries/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 00:05:07 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-05 00:05:07 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-05 00:05:07 +0100
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-05 00:05:07 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-05 00:06:31 +0100
+Processing by EntriesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mEntry Load (0.1ms)[0m  [1mSELECT "entries".* FROM "entries" [0m
+  Rendered entries/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 50ms (Views: 9.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 00:06:31 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-05 00:06:31 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-05 00:06:31 +0100
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-05 00:06:31 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/entries/new" for 127.0.0.1 at 2012-11-05 00:06:33 +0100
+Processing by EntriesController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered entries/_form.html.erb (5.1ms)
+  Rendered entries/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 00:06:33 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-05 00:06:33 +0100
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-05 00:06:33 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-05 00:06:33 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started POST "/entries" for 127.0.0.1 at 2012-11-05 00:06:43 +0100
+Processing by EntriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wyamxo3cXwn5zX/iom30gCSdx9Xf6+sMHzR7Xw3gvBY=", "entry"=>{"title"=>"juju", "pic"=>#<ActionDispatch::Http::UploadedFile:0x00000102910c78 @original_filename="CIMG1324.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"entry[pic]\"; filename=\"CIMG1324.JPG\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/e8/e8bZUyWqELC5w8D9ZX-sDU+++TM/-Tmp-/RackMultipart20121105-4740-cun4fe>>, "description"=>"asdfa", "creation_date(1i)"=>"2012", "creation_date(2i)"=>"11", "creation_date(3i)"=>"4"}, "commit"=>"Create Entry"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEntry Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "entries" WHERE "entries"."title" = 'juju' LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "entries" ("created_at", "creation_date", "description", "pic", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 04 Nov 2012 23:06:43 UTC +00:00], ["creation_date", Sun, 04 Nov 2012], ["description", "asdfa"], ["pic", "CIMG1324.JPG"], ["title", "juju"], ["updated_at", Sun, 04 Nov 2012 23:06:43 UTC +00:00]]
+  [1m[36m (8.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/entries/6
+Completed 302 Found in 26ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/entries/6" for 127.0.0.1 at 2012-11-05 00:06:43 +0100
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mEntry Load (0.2ms)[0m  [1mSELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = 6
+  Rendered entries/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 00:06:43 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-05 00:06:43 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-05 00:06:43 +0100
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-05 00:06:43 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
