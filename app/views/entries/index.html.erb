@@ -1,0 +1,20 @@
+<div align="center">
+	<h1>Vic's Foto Blog</h1>
+
+	<br />
+	<br />
+
+	<% @entries.reverse.each do |entry| %>
+	  <div>
+	    <h2><%= link_to entry.title, entry %></h2>
+	    <p>Post on: <%= entry.creation_date %></p>
+	      <%= link_to 'Edit', edit_entry_path(entry) %>
+	      <%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %>
+	    </p>
+	  </div>
+	<% end %>
+
+	<br />
+
+	<%= link_to 'New Entry', new_entry_path %>
+</div>

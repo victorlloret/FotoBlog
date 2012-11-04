@@ -1,0 +1,39 @@
+<div align="center">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <b>Title:</b>
+    <%= @entry.title %>
+  </p>
+
+  <p>
+    <%= image_tag @entry.pic,:size => '300x200' %>
+  </p>
+
+
+  <p>
+    <b>Description:</b>
+    <%= @entry.description %>
+  </p>
+
+  <p>
+    <b>Creation date:</b>
+    <%= @entry.creation_date %>
+  </p>
+
+  <h2>Comments</h2>
+     <% for comment in @entry.comments %>
+        <%= comment.description %>
+        <hr />
+  <% end %>
+
+  <%= form_tag :action => "comment", :id => @entry %>
+     <%= text_area "comment", "description" %><br />
+     <%= submit_tag "Comment" %>
+  </form>
+
+
+
+  <%= link_to 'Edit', edit_entry_path(@entry) %> |
+  <%= link_to 'Back', entries_path %>
+</div>
