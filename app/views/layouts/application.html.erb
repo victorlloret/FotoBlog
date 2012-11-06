@@ -13,6 +13,7 @@
     <![endif]-->
 
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag :defaults %>
 </head>
 <body>
 	<div class="navbar navbar-fixed-top">
@@ -27,10 +28,10 @@
 			<div class="container nav-collapse">
 	            <ul class="nav pull-right">
 	              <% if user_signed_in? %>
-	 				<%= link_to current_user.email %>
-	 				</br>
+      	 				  <%= link_to current_user.email %>
+      	 				</br>
 	              
-	                <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+                  <%= link_to('Logout', destroy_user_session_path, :method => 'delete')%>
 
 	              <% else %>
 	                <%= link_to('Sign up', new_user_registration_path) %>
@@ -42,8 +43,32 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="content">
+  <% if flash[:notice]%>
+      <div class="alert alert-success">
+      <%= flash[:notice]%>
+    </div>
+  <% end %>
+  <% if flash[:alert]%>
+    <div class="alert alert-error">
+      <% flash[:alert]%>
+      </div>
+  <% end %> 
+        <div class="row">
+           <div class="span12">
+              <%= yield %>
+            </div>
+       
+        </div><!--/row-->
+      </div><!--/content-->
 
-<%= yield %>
+      <footer>
+        <p>&copy; Victor Lloret 2012</p>
+      </footer>
 
+    </div> <!-- /container -->
+
+<%= javascript_include_tag "application" %>
 </body>
 </html>

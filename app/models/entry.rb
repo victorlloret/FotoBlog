@@ -7,5 +7,4 @@ class Entry < ActiveRecord::Base
 	validates_presence_of :title
 	validates :title, :uniqueness => { :message => "El titulo ya se uso" }
 	belongs_to :user
-	
 end
